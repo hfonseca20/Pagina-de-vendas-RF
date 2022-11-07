@@ -1,0 +1,1165 @@
+/*
+Theme Name: A melhor voce II
+Author: Max Silva - maxleandro2@gmail.com
+Description: Tema desenvolido para a Cynthia
+Version: 1.2
+*/
+@font-face {
+	font-family: 'geniso';
+	src: url('assets/fonts/geniso.ttf') ;
+}
+@font-face {
+	font-family: 'manta';
+	src: url('assets/fonts/manta.ttf') ;
+}
+
+/**/
+
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+	max-width: 100%;
+}
+body{
+	/*background: #c59e96;*/
+	 background: #1d0008;
+    -webkit-font-smoothing: antialiased;
+}
+nav {
+	/*height: 80px;*/
+    padding-top: 10px;
+}
+.logo a {
+    font-family: manta;
+    font-size: 55px;
+    color: #ffffff;
+}
+nav ul{
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+    position:relative;
+}
+nav ul li a{
+	color: #fff;
+	font-size: 23px;
+	padding: 4px 7px;
+    transition: 0.5;
+}
+nav ul li a:hover, nav ul li a.active{
+	color: #c59e96;
+}
+nav ul li a.active{
+	background: #c59e96;
+}
+/* header */
+
+/* sub-menu*/
+nav li ul a{
+    color: #cc8e0a;
+    font-size: 17px;
+    background: #f7eae5;
+    padding: 4px 7px;
+    border-radius: 6px;
+    border: 1px solid #f7eae5;
+    transition: 0.5;
+}
+nav li ul a:hover{
+    cursor: pointer;
+    border: 1px solid #f7eae5;
+    background: #f7eae5;
+    color: #c59e96;
+  
+}
+nav li ul:hover{
+    display: block;
+}
+nav li ul {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    background-color: #f7eae5;
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 200;
+}
+
+nav li ul li {
+    line-height: 60px;
+
+}
+    
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+/* mobile-menu */
+.mobile-btn {
+   display: none;
+}
+
+
+@media (max-width: 858px){
+   .mobile-btn {
+        display: block;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        color: #ffffff;
+    	border-top: 4px solid;
+    	margin: 16px 0;
+        float: right;
+        position: relative;
+        -webkit-backface-visibility: hidden;
+    }
+    .mobile-btn::after, .mobile-btn::before {
+        content: '';
+        display: block;
+        height: 4px;
+        margin-top: 6px;
+        background: currentColor;
+        position: relative;
+        transition: transform .2s ease;
+    }
+ 
+    .mobile-btn.active {
+        border-top-color: transparent;
+        z-index: 900;
+        right: 18px;
+        top: 10px;
+        position: fixed;
+    }
+    .mobile-btn.active::after {
+        margin-top: 0px;
+        top: 2px;
+        transform: rotate(45deg);
+    }
+    .mobile-btn.active::before {
+        margin-top: 0px;
+        top: 6px;
+        transform: rotate(135deg);
+    }
+    nav ul.active{
+    	left: 0;
+        z-index: 888;
+        padding-top: 55px;
+    }
+
+    nav ul{
+    	position: fixed;
+    	width: 100%;
+    	height: 100vh;
+    	background: #1d0008;
+    	top: 0;
+    	left: -100%;
+    	text-align: center;
+    	transition: all .5s;
+    }
+    
+    nav ul li{
+    	display: block;
+    }
+    nav ul li a{
+    	background: none;
+        color: #ffffff;
+    }
+    nav ul li a:hover, nav ul li a.active{
+		background: none;
+		border: 1px solid #ddd2ce;
+	}
+	nav ul li a.active{
+		color: #c59e96;
+	}
+    
+}
+/* main */
+.main{
+    min-height: 730px;/*571*/
+    height: 80vh;
+    width: 100%;
+    background: url('assets/img/back-novo-03.png') no-repeat;
+    background-size: 100%;
+    background-position: right;
+    position: relative;
+    /*position: absolute;*/
+}
+.main::after{
+    content: '';
+    display: block;
+    height: 140px;
+    width: 100%;
+    background: url('assets/img/barra-nova-1-01.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+/*
+.main::after{
+    content: '';
+    height: 161px;
+    width: 100%;
+    background: url('assets/img/barra-1a.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}*/
+.frase {
+	color: #fff;
+    font-family: Montserrat;
+    font-size: 35px;
+    margin-top: 139px;
+}
+button.btn-saiba-mais {
+    padding: 13px 22px;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    margin-top: 32px;
+    font-size: 23px;
+    cursor: pointer;
+    
+}
+
+button.btn-saiba-mais:hover {
+    background: #cc8e0a;;
+}
+
+/*
+.main img{
+	margin: 0 auto;
+	position: relative;
+}*/
+.assign{
+	font-family:'hipotamia';
+	float: right;
+    font-size: 36px;
+}
+.pull-right{
+	float: right;
+}
+.pull-left{
+	float: left;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/*box 2*/
+.box-2 {
+    padding-top: 50px;
+    background: #530920;
+}
+.box-2::after{
+    content: '';
+    display: block;
+    height: 158px;
+    width: 100%;
+    background: url('assets/img/barra-nova-1-02.png') no-repeat;
+    background-size: cover;
+
+}
+.title-book{
+    font-family: Montserrat;
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    max-width: 515px;
+    margin: 6px auto 37px auto;
+    text-align: center;
+}
+.box-2 label{
+    color: #ffffff;
+    font-family: Montserrat;
+    /*color: #ad6d40;*/
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin: 25px 0 8px 11px;
+}
+.btn {
+    background: transparent;
+    padding: 16px 39px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    font-family: arial;
+    font-size: 18px;
+    margin: 50px auto 0 auto;
+    border: 2px solid #ffffff;
+}
+.box-2 button:hover{
+    background: #cc8e0a;
+    cursor: pointer;
+}
+
+.box-2 input {
+    border: none;
+    padding: 13px 18px;
+    font-size: 18px;
+    border-radius: 11px;
+    width: 100%;
+}
+.box-2 input:hover { 
+    background: #ecd4d0;
+}
+.img-back-4{
+    max-width: 391px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px){
+    .frase {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 28px;
+        margin-top: 116px;
+    }
+}
+@media (max-width: 991px){
+    .logo a {
+        font-size: 42px;
+    }
+    nav ul li a {
+        color: #fff;
+        font-size: 20p  x;
+    }
+    .main {
+        min-height: 673px;
+    }
+    .main::after {
+        height: 95px;
+    }
+}
+
+@media (max-width: 600px) {
+    .frase {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+button.btn-saiba-mais {
+    padding: 13px 22px;
+    margin-top: 88px;
+    font-size: 17px;
+    }
+
+}
+
+/*box*/
+.box {
+    padding-top: 116px;
+    background: #e6d2d1;
+    position: relative;
+    min-height: 725px;
+    height: 80vh;
+    width: 100%;
+    background: url(assets/img/capa_2.jpg) no-repeat;
+    background-size: 100%;
+    background-position: right;
+    position: relative;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    display: block;
+    height: 173px;
+    width: 100%;
+    background: url(assets/img/bar-ultima-01.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.box h3 {
+    font-family: 'manta';
+    font-size: 53px;
+    color: #ffffff;
+    font-weight: 200;
+}
+.frase-2{
+    color: #ffffff;
+    font-family: Montserrat;
+    display: block;
+    font-size: 30px;
+    margin-top: 54px;
+    font-weight: 600;
+}
+
+.box hr {
+    max-width: 200px;
+    border: 1px solid #ffffff;
+    margin: 21px 3px;
+}
+.box::after{
+    content: '';
+    height: 110px;
+    width: 100%;
+    background: url('assets/img/bar-rodape-01.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+.img-back-2{
+    margin: -90px 0px;
+    position: relative;
+}
+.img-back-3::after{
+    content: '';
+    display: block;
+    height: 334px;
+    width: 306px;
+    position: absolute;
+    right: -25px;
+    background: url('assets/img/folhas-2.png') no-repeat;
+    animation: folhas 5s linear 2s infinite alternate;
+}
+/* insta */
+.insta {
+    padding: 34px 0px 20px 0px;
+    text-align: center;
+	background: #1c0310;
+    position: relative;
+}
+
+.insta h2 {
+    font-family: Montserrat;
+    color: #ffffff;
+    padding: 0px 8px;
+    display: block;
+    margin: 15px auto 26px auto;
+    max-width: 450px;
+    border-radius: 26px;
+    text-align: center;
+    font-size: 37px;
+}
+.insta h2 a{
+    color: #ffffff;
+}
+.insta img{
+    margin: 30px 5px;
+    border: 3px solid #e5d3d0;
+}
+.insta a:hover img {
+    border: 3px solid red;
+    box-shadow: 0 0 0 10px #f3ebea;
+
+     -webkit-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -o-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+      transform: scale(1.01);
+}
+.insta-bloco {
+    max-width: 286px;
+    margin: 0 auto;
+}
+.insta a{
+    color: #fff;
+}
+
+.Barra1 {
+    width: 100%;
+    filter: brightness(100%);
+}
+.insta h3:hover{
+    filter: brightness(90%);
+}
+
+
+/* contato */
+.contato{
+    font-family: Montserrat;
+    background: #610a24;
+    position: relative;
+    padding-bottom: 5px;
+} 
+.contato::before{
+   content: '';
+    display: block;
+    height: 158px;
+    width: 100%;
+    background: url('assets/img/barra-4-01.png') no-repeat;
+    background-size: cover;
+
+}
+
+.box-contato {
+    max-width: 500px;
+    margin: 5px auto;
+    color: #ffffff;
+}
+.contato h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 38px;
+}
+
+.contato input {
+    border: none;
+    padding: 13px 18px;
+    font-size: 18px;
+    border-radius: 11px;
+    width: 100%;
+}
+.contato input:hover { 
+    background: #ecd4d0;
+}
+.contato #floatingTextarea {
+    width: 100%;
+    border-radius: 8px;
+    padding: 7px;
+}
+.contato label {
+    color: #ffffff;
+    font-family: Montserrat;
+    /* color: #ad6d40; */
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin: 25px 0 8px 11px;
+}
+.contato button:hover{
+    background: #cc8e0a;
+    cursor: pointer;
+}
+.btnnn {
+    background: transparent;
+    padding: 16px 39px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    font-family: arial;
+    font-size: 18px;
+    margin: 40px auto 0 auto;
+    border: 2px solid #ffffff;
+}
+
+
+/*rodape*/
+.rodape-back-1{
+	background: #610a24;
+}
+.rodape-back-2{
+	background: #610a24;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.rodape p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    /*color: #313131;*/
+	color: #ffffff;
+} 
+.rodape a{
+    text-decoration: none;
+    padding: 10px 0px;
+    color: #000;
+}
+.rodape a:hover{
+    color: #f5edea;
+}
+.folha-rodape-dir{
+    position: relative;
+}
+.folha-rodape-dir::after{
+    content: '';
+    height: 80%;
+    width: 87px;
+    background: url(assets/img/flor-rodape-dir.png) no-repeat;
+    left: -95px;
+    position: absolute;
+}
+.folha-rodape-dirr{
+    position: relative;
+}
+.folha-rodape-dirr::before{
+    content: '';
+    height: 80%;
+    width: 87px;
+    background: url(assets/img/flor-rodape-dir.png) no-repeat;
+    left: -95px;
+    position: absolute;
+}
+.folha-rodape-esq::after{
+    content: '';
+    height: 36px;
+    width: 87px;
+    margin-left: 10px;
+    background: url(assets/img/flor-rodape-esq.png) no-repeat;
+    position: absolute;
+}
+/* blog */
+.blog-container{
+    padding: 70px 5px;
+}
+.blog-container a:hover .box-not {
+    cursor: pointer;
+    background: #f9e5dd;
+}
+.box-not {
+    width: 316px;
+    display: block;
+    background: #fff;
+    padding: 12px 12px;
+    color: #966038;
+    border-radius: 18px;
+    margin: 10px auto 50px auto;
+    min-height: 332px;
+}
+.box-not p{
+    position: relative;
+}
+.box-not p::after {
+    content: '';
+    display: block;
+    height: 96px;
+    width: 76px;
+    background: url(assets/img/folhas-blog-botton.png) no-repeat;
+    position: absolute;
+    bottom: -16px;
+    right: -72px;
+    transform: rotate(14deg);
+}
+
+.title-bolg{
+    font-family: 'FwY';
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 19px;
+    position: relative;
+    min-height: 68px;
+}
+
+.title-bolg::before{
+    content: '';
+    display: block;
+    height: 97px;
+    width: 97px;
+    background: url(assets/img/folhas-blog-top.png) no-repeat;
+    position: absolute;
+    top: -32px;
+    left: -59px;
+    transform: rotate(-53deg);
+}
+
+.p-bolg{
+    font-family: 'gabriola', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: justify;
+}
+.back-onda{
+    height: 4px;
+    display: block;
+    background: #ddd2ce;
+}
+
+  
+/* page */
+.email-campo{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 37px 5px;
+    text-align: center;
+}
+.email-campo input[type="text"] {
+    padding: 7px 5px;
+    border-radius: 7px;
+}
+.email-inter {
+
+}
+.single-email {
+    font-family: 'FwY';
+    color: #fff;
+    font-size: 17px;
+    display: block;
+    max-width: 515px;
+    margin: 6px auto 10px auto;
+    text-align: center;
+}
+.btnn {
+    font-family: 'FwY';
+    background: #cc8e0a;
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #fff;
+    margin: 7px auto 0 auto;
+    border: none;
+    cursor: pointer;
+}
+    
+    .coluna {
+        background: #fff;
+        font-family: Roboto,sans-serif;
+        line-height: 1.9;
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .coluna-text{
+        padding: 20px 10px 60px 10px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .coluna-text a {
+        color: #cc8e0a;
+    }
+    .coluna-text a:hover {
+        color: #778fa6;
+    }
+
+/* Ebook */
+.img-book {
+    margin-bottom: -47px;
+}
+.page-ebook{
+    padding: 51px 0 0 0;
+    text-align: center;
+    position: relative;
+}
+.page-ebook::before{
+    content: '';
+    height: 161px;
+    width: 100%;
+    background: url('assets/img/ebook-positiva-roxo.png') no-repeat;
+    /*background: url('assets/img/barra-4.png') no-repeat;*/
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.page-ebook-2{
+    padding: 19px 5px;
+    text-align: center;
+}
+
+.page-ebook-2 p{
+    font-family: 'FwY';
+    color: #ad6d40;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.btn-book {
+    font-family: 'FwY';
+    background: #cc8e0a;
+    padding: 9px 51px;
+    border-radius: 8px;
+    color: #fff;
+    display: block;
+    margin: 30px auto 0 auto;
+    border: none;
+}
+.btn-book:hover{
+    background: #ad6d40;
+    cursor: pointer;
+    cursor: pointer;
+}
+.page-ebook-2{
+    background: #dfd2cf;
+    padding: 20px 0 60px 0;
+}
+
+/* landpage ebook - seja uma mulher positiva*/
+.nac-cla{
+    background: #e6d2d1 !important;
+    height: 80px;
+}
+.bar-princ{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    background: #e5d3d0;
+}
+.head-text{
+    font-family: 'FwY';
+    display: block;
+    border-radius: 10px;
+    margin-top: 19px;
+    color: #cc8e0a;
+    font-weight: 700;
+    z-index: 23;
+    position: relative;
+}
+.title-head{
+    position: absolute;
+    font-size: 21px;
+}
+.bar-princ::after {
+    content: '';
+    height: 110px;
+    width: 100%;
+    /*background: url(assets/img/barra-2.png) no-repeat;*/
+    background: url(assets/img/ebook-positiva-topo-roxo.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -131px;
+}
+.page-ebook.positiva {
+    color: #fff;
+    font-family: 'FwY';
+}
+.cont-positiva .img-book{
+    margin-top: 74px;
+}
+
+.page-ebook.positiva  ul {
+    display: block;
+    max-width: 534px;
+    text-align: left;
+    margin: 0 auto;
+}
+.page-ebook.positiva ul li {
+    float: left;
+    font-size: 18px;
+    line-height: 30px;
+    list-style: circle;
+}
+.tema-posit{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+   margin-bottom: 36px;
+   margin-top: 49px;
+    text-align: left;
+}
+.cont-positiva {
+    font-family: 'FwY';
+}
+.page-ebook.positiva .cont-positiva {
+    padding: 5px 0 0 13px;
+}
+ .page-ebook.positiva .post-baixo {
+    float: left;
+    margin: 30px;
+    font-size: 20px;
+}
+.page-ebook-2.positiva p {
+    max-width: 457px !important;
+
+}
+.page-ebook-2.positiva {
+    padding-top: 71px;
+ }
+
+.btn-positiv {
+    font-family: 'FwY';
+    background: #cc8e0a;
+}
+
+.btn-positiv {
+        font-family: 'FwY';
+        background: #cc8e0a;
+        display: block;
+        border-radius: 10px;
+        float: right;
+        text-align: center;
+        color: #fff;
+}
+
+@media only screen and (min-width: 769px) {
+
+    .btn-positiv {
+    
+        font-size: 17px;
+        margin-top: 10px;
+        height: 54px;
+        padding: 13px;
+        width: 500px;
+
+    }
+    
+       .nac-cla .logo img {
+           display: none;
+        }
+}
+@media only screen and (min-width: 530px) {
+    .nac-cla .logo img {
+           display: none;
+        }
+}
+  @media only screen and (min-width: 538px) and (max-width: 768px ) {
+        .btn-positiv {
+               font-size: 15px;
+                margin-top: 10px;
+                height: 54px;
+                padding: 13px;
+                width: 419px;
+        }
+        
+        
+       
+    }
+    @media only screen and (max-width: 768px){
+        .mob-a{
+        order: 1;
+       }
+       .mob-b{
+        order: 2;
+       }
+       .cont-positiva .img-book {
+         margin-bottom: -11px;
+        }
+    }
+  @media only screen and (min-width: 517px) and (max-width: 539px ) {
+        .btn-positiv {
+            font-size: 15px;
+            margin-top: 10px;
+            height: 54px;
+            padding: 13px;
+            width: 410px;
+
+        }
+        .nac-cla .logo img {
+           display: none;
+        }
+    }
+
+  @media only screen and (max-width: 516px) {
+        .logo a {
+            font-size: 35px;
+        }
+        .tema-posit {
+            font-size: 19px !important;
+            margin-bottom: 27px !important;
+            text-align: center;
+        }
+        .page-ebook.positiva ul li {
+            font-size: 16px !important;
+            line-height: 28px !important;
+        }
+        .page-ebook-2.positiva {
+            padding-top: 25px !important;
+        }
+        .page-ebook-2 p {
+            font-size: 14px !important;
+        }
+       .page-ebook-2.positiva .btn-book {
+            padding: 9px 22px !important;
+            width: 260px !important;
+        }
+      .btn-positiv {
+                border-radius: 10px;
+                font-size: 14px;
+                height: 65px;
+                padding: 5px;
+                width: 100%;
+                margin-top: 8px;
+                display: flex;
+                align-items: center;
+
+        }
+
+        .bar-princ{
+            justify-content: center;
+        }
+        
+         .nac-cla .logo img {
+           display: block;
+           margin: 0 auto;
+            display: block;
+        }
+        
+        .title-head {
+            text-align: center;
+        }
+        
+        .bar-princ::after {
+            // background: none;
+            bottom: -108px !important;
+        }
+        
+
+    }
+
+
+        /* responsivo */
+        @media only screen and (max-width: 434px) {
+            .bloc-principal h3 {
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 915px) {
+            .subtitulo {
+                font-size: 17px;
+            }
+        }
+/* responsivo todos */
+@media(max-width: 524px){
+    .modal {
+     width: 85% !important;
+    }
+    /* index */
+    .folha-insta::before{
+        background: url('assets/img/insta-folhas-mobile.png') no-repeat !important;
+        left: 6px;
+        width: 286px;
+    }
+    .insta h2 {
+        max-width: 255px;
+        font-size: 15px;
+    }
+    .frase-2 {
+        margin-top: 0px;
+        font-size: 17px;
+        text-align: justify;
+    }
+    .img-back {
+        text-align: center;
+    }
+    .img-back-2 {
+        margin: 0px;
+        display: none;
+    }
+    .btn {
+        padding: 5px 22px;
+        margin: 25px auto 0 auto;
+    }
+    .title-book {
+        font-size: 15px;
+    }
+    .box {
+        padding: 37px 0 119px 0;
+        background: none;
+        height: 306px;
+        min-height: 306px;
+    }
+    .box-2 {
+        padding-top: 10px;
+    }
+    .box::after{
+        background: none;
+    }
+    .assign{
+        font-size: 30px;
+    }
+    /* single*/
+    .title-blog {
+      font-size: 19px;
+    }
+    /*Rodapé*/
+    .folha-rodape-dir::after{
+        background: url(assets/img/flor-rodape-dir-mobile.png) no-repeat;
+        width: 66px;
+        left: -74px;
+    }
+    .folha-rodape-esq::after{
+        background: url(assets/img/flor-rodape-esq-mobile.png) no-repeat;
+        width: 66px;
+        margin-left: 6px;
+    }
+    .rodape p {
+        font-size: 13px;
+        margin: 10px auto 15px auto;
+        max-width: 248px;
+    }
+
+    /* blog */
+    .title-bolg::before{
+        height: 60px;
+        width: 60px;
+        background: url(assets/img/folhas-blog-top-mobile.png) no-repeat;
+        top: -15px;
+        left: -46px;
+        transform: rotate(-72deg);
+    }
+    .box-not {
+        width: 240px;
+        margin: 10px auto 48px auto;
+    }
+    .box-not p::after {
+        height: 73px;
+        width: 56px;
+        background: url(assets/img/folhas-blog-botton-mobile.png) no-repeat;
+        right: -41px;
+        transform: rotate(42deg);
+        bottom: -35px;
+    }
+
+    .title-bolg {
+        font-size: 15px;
+    }
+    /* site */
+    .main {
+        background: none;
+        min-height: 386px;
+        z-index: -1;
+    }
+    button.btn-saiba-mais {
+         margin-top: 33px;
+    }
+
+    .img-back-4 {
+        max-width: 200px;
+    }
+    .box h3 {
+        font-size: 35px;
+    }
+
+
+
+
+
+}
+
+ @media(max-width: 991px){
+       .img-back-2 {
+            text-align: center;
+            margin: 0px 0px !important;
+            display: none;
+        }
+}
+
+.butao-form01 {
+    background: transparent !important;
+    padding: 16px 39px !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    display: block !important;
+    font-family: arial !important;
+    font-size: 20px !important;
+    margin: 40px auto 0 auto !important;
+    border: 2px solid #ffffff !important;
+}
+
+.butao-form01:hover {
+  /*  border: none;
+    padding: 13px 18px;
+    font-size: 18px;
+    border-radius: 11px;
+    width: 100%;  */
+    background: #cc8e0a !important;
+    cursor: pointer !important;
+}
+
+
+
+
+
+
+<?= get_template_directory_uri(); ?>/assets/img/book_magazine.png
